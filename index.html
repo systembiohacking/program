@@ -8,11 +8,39 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Lexend:wght@300;400;500;600&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+
+  <!-- NAV -->
+  <header class="nav">
+    <div class="nav__inner">
+      <!-- Hamburger button -->
+      <button class="nav__burger" id="navBurger" aria-label="Открыть меню" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Side menu -->
+  <div class="nav-overlay" id="navOverlay"></div>
+  <nav class="nav-menu" id="navMenu" aria-hidden="true">
+    <button class="nav-menu__close" id="navClose" aria-label="Закрыть меню">✕</button>
+    <ul class="nav-menu__list">
+      <li><a href="#problem">Почему не работают диеты</a></li>
+      <li><a href="#evidence">Реальные данные</a></li>
+      <li><a href="#structure">Структура программы</a></li>
+      <li><a href="#change">Как происходят изменения</a></li>
+      <li><a href="#results">Результат</a></li>
+      <li><a href="#details">Стоимость и формат</a></li>
+      <li><a href="#fit">Кому подходит</a></li>
+      <li><a href="#expert">Об эксперте</a></li>
+      <li><a href="#faq">Вопросы</a></li>
+    </ul>
+
+  </nav>
 
   <!-- 1. HERO -->
   <section class="hero" id="top">
@@ -51,20 +79,18 @@
       </a>
     </div>
 
-    <div class="hero__ornament" aria-hidden="true">
-      <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="200" cy="200" r="180" fill="none" stroke="currentColor" stroke-width="0.5" opacity="0.4"/>
-        <circle cx="200" cy="200" r="140" fill="none" stroke="currentColor" stroke-width="0.5" opacity="0.3"/>
-        <circle cx="200" cy="200" r="100" fill="none" stroke="currentColor" stroke-width="0.5" opacity="0.25"/>
-        <circle cx="200" cy="200" r="60" fill="none" stroke="currentColor" stroke-width="0.5" opacity="0.2"/>
-      </svg>
+    <div class="hero__photo">
+      <img src="assets/hero-photo.jpeg" alt="" aria-hidden="true" />
     </div>
   </section>
 
   <!-- 2. PROBLEM -->
-  <section class="section problem">
-    <div class="container container--narrow">
-      <div class="section__label reveal">Проблема</div>
+  <section class="section problem" id="problem">
+    <div class="container">
+      <div class="problem__inner">
+        <div class="problem__photo"><img src="assets/problem-photo.jpeg" alt="" aria-hidden="true" /></div>
+        <div class="problem__content">
+          <div class="section__label reveal">Проблема</div>
       <h2 class="section__title reveal">
         Почему стандартные подходы<br />не дают стабильного результата
       </h2>
@@ -96,12 +122,14 @@
         <p class="prose__accent">
           Пока эти особенности остаются вне поля вашего внимания, любые, даже самые титанические усилия, будут давать лишь временный эффект.
         </p>
-      </div>
-    </div>
+        </div><!-- end prose -->
+        </div><!-- end problem__content -->
+      </div><!-- end problem__inner -->
+    </div><!-- end container -->
   </section>
 
   <!-- 3. CASE / EVIDENCE -->
-  <section class="section evidence">
+  <section class="section evidence" id="evidence">
     <div class="container">
       <div class="section__label reveal">Реальные данные</div>
       <h2 class="section__title reveal">
@@ -115,7 +143,7 @@
 
         <article class="case reveal">
           <div class="case__media">
-            <img src="graph1.jpeg" alt="График реакции на кофе натощак" loading="lazy" />
+            <img src="assets/graph1.jpeg" alt="График реакции на кофе натощак" loading="lazy" />
           </div>
           <div class="case__body">
             <div class="case__num">График 1</div>
@@ -128,7 +156,7 @@
 
         <article class="case case--reverse reveal">
           <div class="case__media">
-            <img src="graph2.jpeg" alt="График реакции на обычный обед с лавашом" loading="lazy" />
+            <img src="assets/graph2.jpeg" alt="График реакции на обычный обед с лавашом" loading="lazy" />
           </div>
           <div class="case__body">
             <div class="case__num">График 2</div>
@@ -141,7 +169,7 @@
 
         <article class="case reveal">
           <div class="case__media">
-            <img src="graph3.jpeg" alt="График результата программы — предсказуемый день" loading="lazy" />
+            <img src="assets/graph3.jpeg" alt="График результата программы — предсказуемый день" loading="lazy" />
           </div>
           <div class="case__body">
             <div class="case__num">График 3</div>
@@ -162,7 +190,7 @@
   </section>
 
   <!-- 4. PROGRAM STRUCTURE -->
-  <section class="section structure">
+  <section class="section structure" id="structure">
     <div class="container">
       <div class="section__label reveal">Как устроена программа</div>
       <h2 class="section__title reveal">Структура программы</h2>
@@ -204,7 +232,7 @@
   </section>
 
   <!-- 5. HOW CHANGE HAPPENS -->
-  <section class="section change">
+  <section class="section change" id="change">
     <div class="container container--narrow">
       <div class="section__label reveal">Метод</div>
       <h2 class="section__title reveal">Как происходят изменения</h2>
@@ -233,7 +261,7 @@
   </section>
 
   <!-- 6. RESULTS -->
-  <section class="section results">
+  <section class="section results" id="results">
     <div class="container">
       <div class="section__label reveal">Что вы получаете</div>
       <h2 class="section__title reveal">Результат программы</h2>
@@ -242,10 +270,20 @@
         По итогам программы вместо постоянной борьбы с весом и усталостью формируется управляемое и предсказуемое состояние
       </p>
 
-      <div class="results__grid">
+      <div class="results__top">
         <div class="result-card reveal"><span>Стабильный вес без постоянных откатов</span></div>
         <div class="result-card reveal"><span>Ровный уровень энергии в течение дня</span></div>
         <div class="result-card reveal"><span>Улучшение концентрации и ясности мышления</span></div>
+      </div>
+    </div>
+
+    <!-- Horizon divider — neon line image -->
+    <div class="results__horizon reveal" aria-hidden="true">
+      <img src="assets/results-bg.jpeg" alt="" />
+    </div>
+
+    <div class="container">
+      <div class="results__bottom">
         <div class="result-card reveal"><span>Более качественный сон</span></div>
         <div class="result-card reveal"><span>Снижение тяги к сладкому</span></div>
         <div class="result-card reveal"><span>Еда перестает быть постоянным источником тревоги</span></div>
@@ -254,7 +292,7 @@
   </section>
 
   <!-- 7. PROGRAM DETAILS -->
-  <section class="section details">
+  <section class="section details" id="details">
     <div class="container container--narrow">
       <div class="section__label reveal">Формат</div>
       <h2 class="section__title reveal">Как проходит работа в программе</h2>
@@ -289,7 +327,7 @@
   </section>
 
   <!-- 8. WHO FOR / NOT FOR -->
-  <section class="section fit">
+  <section class="section fit" id="fit">
     <div class="container">
       <div class="fit__grid">
         <div class="fit__col reveal">
@@ -325,11 +363,11 @@
   </section>
 
   <!-- 9. EXPERT -->
-  <section class="section expert">
+  <section class="section expert" id="expert">
     <div class="container">
       <div class="expert__grid">
         <div class="expert__photo reveal">
-          <img src="expert.jpeg" alt="Татьяна Анисимова" loading="lazy" />
+          <img src="assets/expert.jpeg" alt="Татьяна Анисимова" loading="lazy" />
         </div>
 
         <div class="expert__body reveal">
@@ -359,7 +397,7 @@
   </section>
 
   <!-- 10. FAQ -->
-  <section class="section faq">
+  <section class="section faq" id="faq">
     <div class="container container--narrow">
       <div class="section__label reveal">Вопросы</div>
       <h2 class="section__title reveal">Часто задаваемые вопросы</h2>
@@ -443,8 +481,13 @@
   <footer class="footer">
     <div class="container">
       <div class="footer__inner">
-        <div class="footer__name">Татьяна Анисимова</div>
-        <div class="footer__meta">Персональная настройка метаболизма</div>
+        <div class="footer__left">
+          <div class="footer__name">Татьяна Анисимова</div>
+          <div class="footer__meta">Персональная настройка метаболизма</div>
+        </div>
+        <div class="footer__links">
+          <a href="privacy.html" class="footer__link">Политика конфиденциальности</a>
+        </div>
       </div>
     </div>
   </footer>

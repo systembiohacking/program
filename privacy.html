@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Политика конфиденциальности — Татьяна Анисимова</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    .privacy {
+      padding: 100px 0 140px;
+    }
+    .privacy__back {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 14px;
+      color: var(--text-muted);
+      margin-bottom: 56px;
+      transition: color 0.25s;
+    }
+    .privacy__back:hover {
+      color: var(--accent-dark);
+    }
+    .privacy__back::before {
+      content: "←";
+    }
+    .privacy__title {
+      font-family: var(--serif);
+      font-weight: 400;
+      font-size: clamp(36px, 5vw, 56px);
+      line-height: 1.1;
+      color: var(--text);
+      margin-bottom: 56px;
+      letter-spacing: -0.01em;
+    }
+    .privacy__body {
+      max-width: 740px;
+    }
+    .privacy__body h2 {
+      font-family: var(--serif);
+      font-weight: 500;
+      font-size: 24px;
+      color: var(--text);
+      margin: 48px 0 16px;
+      letter-spacing: -0.01em;
+    }
+    .privacy__body h2:first-of-type {
+      margin-top: 0;
+    }
+    .privacy__body p {
+      font-size: 16.5px;
+      line-height: 1.8;
+      color: var(--text);
+      margin-bottom: 16px;
+    }
+    .privacy__body ul {
+      list-style: none;
+      margin: 8px 0 20px;
+    }
+    .privacy__body ul li {
+      padding: 10px 0 10px 28px;
+      font-size: 16.5px;
+      line-height: 1.6;
+      color: var(--text);
+      border-bottom: 1px solid var(--line-soft);
+      position: relative;
+    }
+    .privacy__body ul li:first-child {
+      border-top: 1px solid var(--line-soft);
+    }
+    .privacy__body ul li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 14px;
+      height: 1px;
+      background: var(--accent);
+    }
+    .privacy__body a {
+      color: var(--accent-dark);
+      border-bottom: 1px solid var(--accent-soft);
+      transition: border-color 0.25s;
+    }
+    .privacy__body a:hover {
+      border-bottom-color: var(--accent-dark);
+    }
+  </style>
+</head>
+<body>
+
+  <header class="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">
+        <span class="nav__mark">ТА</span>
+        <span class="nav__name">Татьяна Анисимова</span>
+      </a>
+      <a href="https://tally.so/r/BzbNQ4" class="nav__cta" target="_blank" rel="noopener">Записаться</a>
+    </div>
+  </header>
+
+  <main class="privacy">
+    <div class="container">
+      <a href="index.html" class="privacy__back">Вернуться на главную</a>
+
+      <h1 class="privacy__title">Политика конфиденциальности</h1>
+
+      <div class="privacy__body">
+
+        <h2>1. Общие положения</h2>
+        <p>Настоящая политика конфиденциальности регулирует порядок обработки и использования персональных данных пользователей.</p>
+
+        <h2>2. Какие данные собираются</h2>
+        <p>Пользователь предоставляет следующие данные:</p>
+        <ul>
+          <li>имя</li>
+          <li>адрес электронной почты</li>
+        </ul>
+
+        <h2>3. Цели сбора данных</h2>
+        <p>Персональные данные используются для:</p>
+        <ul>
+          <li>связи с пользователем</li>
+          <li>предоставления информации об услугах</li>
+          <li>обработки заявок</li>
+        </ul>
+
+        <h2>4. Передача данных третьим лицам</h2>
+        <p>Для сбора данных используется сторонний сервис (Tally). Данные могут обрабатываться этим сервисом в рамках его функционала.</p>
+
+        <h2>5. Защита данных</h2>
+        <p>Оператор принимает необходимые меры для защиты персональных данных от неправомерного доступа и распространения.</p>
+
+        <h2>6. Согласие пользователя</h2>
+        <p>Пользователь, оставляя данные через форму на сайте, выражает согласие с данной политикой конфиденциальности.</p>
+
+        <h2>7. Контакты</h2>
+        <p>По всем вопросам обработки персональных данных пользователь может связаться по email: <a href="mailto:systembiohacking@gmail.com">systembiohacking@gmail.com</a></p>
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__left">
+          <div class="footer__name">Татьяна Анисимова</div>
+          <div class="footer__meta">Персональная настройка метаболизма</div>
+        </div>
+        <div class="footer__links">
+          <a href="privacy.html" class="footer__link">Политика конфиденциальности</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
