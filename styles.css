@@ -699,11 +699,18 @@ a   { color:inherit; text-decoration:none; }
 
 .final-cta__title {
   position:relative; font-family:var(--serif);
-  font-weight:400; font-size:clamp(32px,4.5vw,52px);
-  line-height:1.12; color:var(--graphite);
+  font-weight:400; font-size:clamp(28px,4.5vw,52px);
+  line-height:1.15; color:var(--graphite);
   margin-bottom:24px; letter-spacing:-.01em;
+  word-break: normal;
+  overflow-wrap: break-word;
+  hyphens: auto;
 }
 .final-cta__title em { font-style:italic; color:var(--mint-dark); }
+
+@media (max-width: 480px) {
+  .final-cta__title { font-size: 26px; }
+}
 
 .final-cta__text {
   position:relative; font-size:18px; font-weight:300;
